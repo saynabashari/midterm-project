@@ -1,0 +1,250 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta property="og:description" content="MFT Midterm project" />
+    <title>FashionHub</title>
+    <link rel="icon" type="image/png" href="assets/image/favicon.png" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Lusitana:wght@400;700&family=Space+Grotesk:wght@300..700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <header>
+      <div class="header__logo">
+        <img src="assets/image/logo.png" alt="logo" class="logo" />
+        <nav class="header__nav">
+          <a href="#" class="nav__link">Category</a>
+          <a href="#" class="nav__link">Brand</a>
+          <a href="#" class="nav__link">contact</a>
+          <a href="#" class="nav__link">FAQ</a>
+        </nav>
+      </div>
+      <div class="header__button">
+        <button
+          type="button"
+          aria-label="bag shopping"
+          class="header__bag-btn header__btn"
+        >
+          <img src="assets/icon/bag-brown.svg" alt="bag" />
+          <span class="header__bag-count">1</span>
+        </button>
+        <button
+          type="button"
+          aria-label="notif"
+          class="header__bell-btn header__btn"
+        >
+          <img src="assets/icon/notification.svg" alt="bell" />
+        </button>
+
+        <div class="header__user">
+          <img
+            src="assets/image/user-1.png"
+            alt="Author"
+            class="header__user--img"
+          />
+          <div class="header__txt">
+            <span class="header__title">Good Morning!</span>
+            <span class="header__subtitle">Scarlet Johnson</span>
+          </div>
+        </div>
+      </div>
+    </header>
+    <main>
+      <section class="hero-section">
+        <div class="product-gallery">
+          <div class="main-image">
+            <img src="assets/image/product-1.png" alt="Coast Dress" />
+          </div>
+          <div class="thumbnail-list">
+            <div class="thumb active">
+              <img src="assets/image/product-2.png" alt="product1" />
+            </div>
+            <div class="thumb">
+              <img src="assets/image/product-3.png" alt="product 2" />
+            </div>
+            <div class="thumb">
+              <img src="assets/image/product-4.png" alt="product3" />
+            </div>
+            <div class="thumb">
+              <img src="assets/image/product-5.png" alt="product4" />
+            </div>
+          </div>
+        </div>
+
+        <div class="product-details">
+          <nav class="breadcrumb">
+            <a href="#">Home</a>
+            <img src="assets/icon/arrow-right-gray.svg" />
+            <a href="#">Fashion</a>
+            <img src="assets/icon/arrow-right-gray.svg" />
+            <a href="#">Products</a>
+            <img src="assets/icon/arrow-right-gray.svg" />
+            <a href="#">Skirts</a>
+            <img src="assets/icon/arrow-right-gray.svg" />
+            <span>Coast Dress</span>
+          </nav>
+
+          <div class="product-header">
+            <div class="product-title-group">
+              <h1 class="product-title">Coast Dress</h1>
+              <p class="product-subtitle">
+                Breezy, versatile, occasion-ready style.
+              </p>
+            </div>
+
+            <div class="product-actions">
+              <button type="button" class="action-btn heart">
+                <img src="assets/icon/heart.svg" alt="heart" /> <span>109</span>
+              </button>
+              <button type="button" class="action-btn">
+                <img src="assets/icon/archive.svg" alt="archive" />
+              </button>
+              <button type="button" class="action-btn">
+                <img src="assets/icon/share.svg" alt="share" />
+              </button>
+            </div>
+          </div>
+
+          <div class="product-price-rating">
+            <div class="price-wrapper">
+              <div class="price-group">
+                <span class="current-price">$710.99</span>
+                <span class="original-price">$799.99</span>
+              </div>
+
+              <div class="rating-info-group">
+                <div class="rating-wrapper">
+                  <button type="button" class="rating-btn">
+                    <img
+                      src="assets/icon/star.svg"
+                      alt="star"
+                      class="rating-icon"
+                    />
+                    <span>4.8</span>
+                  </button>
+                  <button type="button" class="rating-btn">
+                    <img
+                      src="assets/icon/message.svg"
+                      alt="reviews"
+                      class="rating-icon"
+                    />
+                    <span>67 Reviews</span>
+                  </button>
+                </div>
+
+                <span class="discount-tag">93% buyers recommended this</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="option-section">
+            <label class="option-label">Choose a Color</label>
+            <div class="color-options">
+              <button
+                type="button"
+                class="color-circle active"
+                style="background-color: #ecdecc"
+              ></button>
+              <button
+                type="button"
+                class="color-circle"
+                style="background-color: #bbd278"
+              ></button>
+              <button
+                type="button"
+                class="color-circle"
+                style="background-color: #bbc1f8"
+              ></button>
+              <button
+                type="button"
+                class="color-circle"
+                style="background-color: #ffaad9"
+              ></button>
+              <button
+                type="button"
+                class="color-circle"
+                style="background-color: #98c185"
+              ></button>
+              <button
+                type="button"
+                class="color-circle"
+                style="background-color: #ffb6b6"
+              ></button>
+            </div>
+          </div>
+
+          <div class="option-section">
+            <label class="option-label">Choose a Size</label>
+            <div class="size-options">
+              <label class="size-radio active"
+                ><input type="radio" name="size" checked /> Small</label
+              >
+              <label class="size-radio"
+                ><input type="radio" name="size" /> Medium</label
+              >
+              <label class="size-radio"
+                ><input type="radio" name="size" /> Large</label
+              >
+              <label class="size-radio"
+                ><input type="radio" name="size" /> Extra Large</label
+              >
+              <label class="size-radio"
+                ><input type="radio" name="size" /> XXL</label
+              >
+            </div>
+          </div>
+
+          <div class="cart-actions">
+            <div class="quantity-selector">
+              <button type="button">
+                <img src="assets/icon/minus.svg" />
+              </button>
+              <span>5</span>
+              <button type="button">
+                <img src="assets/icon/add.svg" />
+              </button>
+            </div>
+            <button type="button" class="add-to-cart-btn">
+              <img src="assets/icon/bag-white.svg" alt="bag" />
+              Add To Cart
+            </button>
+          </div>
+
+          <div class="delivery-info">
+            <div class="info-item">
+              <img
+                src="assets/icon/truck.svg"
+                alt="delivery"
+                class="info-icon"
+              />
+              <div>
+                <h4>Free Delivery</h4>
+                <p>
+                  Enter your Postal code for Delivery Availability.
+                  <a href="#">Details</a>
+                </p>
+              </div>
+            </div>
+            <div class="info-item">
+              <img
+                src="assets/icon/bag-red.svg"
+                alt="return"
+                class="info-icon"
+              />
+              <div>
+                <h4>Return Delivery</h4>
+                <p>Free 30 days Delivery Return. <a href="#">Details</a></p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+  </body>
+</html>
