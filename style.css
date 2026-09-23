@@ -112,9 +112,7 @@ header {
 .header__bag-btn {
   background-color: rgba(222, 169, 72, 0.1);
 }
-/* ==========================================
-   1. تنظیمات پایه و Header (مطابق با کد اولیه شما)
-   ========================================== */
+
 body {
   font-family: "Inter", sans-serif;
   font-size: 16px;
