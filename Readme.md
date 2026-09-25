@@ -8,7 +8,6 @@ A simple fashion product page built with HTML & CSS based on a Figma design.
 - Navigation menu
 - Product image gallery
 - Product information
-- Free Delivery & Easy Returns box
 - Customer reviews
 
 ## Technologies
