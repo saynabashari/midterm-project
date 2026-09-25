@@ -1,13 +1,22 @@
-# 🛍️ FashionHub - Product Detail Page
+# FashionHub 🛍️
 
-A responsive and modern e-commerce product detail page built with semantic HTML5 and pure CSS3, designed based on Figma UI components.
+A simple fashion product page built with HTML & CSS based on a Figma design.
 
----
+## Features
 
-## 🛠️ Tech Stack
+- Responsive product page
+- Navigation menu
+- Product image gallery
+- Product information
+- Free Delivery & Easy Returns box
+- Customer reviews
 
-- HTML5 (Semantic structure)
-- CSS3 (Flexbox, CSS Grid, Custom Properties)
-- Google Fonts (Inter font family)
+## Technologies
 
----
+- HTML5
+- CSS3
+- Git & GitHub
+
+## Author
+
+Sayna Bashari
