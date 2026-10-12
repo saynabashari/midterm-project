@@ -4,6 +4,7 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  transition: 0.3s ease;
 }
 *::selection {
   background-color: #445388;
@@ -52,6 +53,11 @@ header {
 .nav__link {
   text-decoration: none;
   color: #0d3356;
+  padding: 8px 16px;
+  border-radius: 10px;
+}
+.nav__link:hover {
+  background-color: #e4e4e4;
 }
 .header__button {
   display: flex;
@@ -97,10 +103,10 @@ header {
 }
 .header__bag-count {
   position: absolute;
-  top: -4px;
-  right: -4px;
-  width: 20px;
-  height: 20px;
+  top: -2px;
+  right: -2px;
+  width: 18px;
+  height: 18px;
   background-color: #0d3356;
   color: #fff;
   border-radius: 99px;
@@ -203,14 +209,15 @@ header {
 
 .header__bag-btn {
   position: relative;
+  background-color: rgba(104, 62, 0, 0.1);
 }
 
 .header__bag-count {
   position: absolute;
-  top: -4px;
-  right: -4px;
-  width: 20px;
-  height: 20px;
+  top: -3px;
+  right: -3px;
+  width: 18px;
+  height: 18px;
   background-color: #0d3356;
   color: #fff;
   border-radius: 99px;
@@ -218,7 +225,7 @@ header {
   align-items: center;
   justify-content: center;
   outline: 1px solid #fff;
-  font-size: 12px;
+  font-size: 10px;
 }
 
 .hero-section {
@@ -249,6 +256,8 @@ header {
   height: 700px;
   object-fit: cover;
   display: block;
+  object-position: top;
+  border: 1px solid #e8e2e2;
 }
 
 .thumbnail-list {
@@ -264,10 +273,6 @@ header {
   cursor: pointer;
   border: 2px solid transparent;
   transition: border-color 0.2s ease;
-}
-
-.thumb.active {
-  border-color: #0d3356;
 }
 
 .thumb img {
@@ -295,17 +300,18 @@ header {
   width: fit-content;
 }
 
-.breadcrumb a {
+.breadcrumb span {
   color: #8c8c8c;
-  text-decoration: none;
   transition: color 0.2s ease;
 }
 
-.breadcrumb a:hover {
+.breadcrumb span:not(.current):hover {
   color: #0d3356;
+  cursor: pointer;
 }
 
-.breadcrumb span {
+.breadcrumb span.current,
+.breadcrumb span:last-child {
   color: #0d3356;
   font-weight: 500;
 }
@@ -351,7 +357,7 @@ header {
 .action-btn {
   background: #f4f4f4;
   border: none;
-  padding: 8px 14px;
+  padding: 8px;
   border-radius: 12px;
   display: flex;
   align-items: center;
@@ -361,8 +367,9 @@ header {
   color: #0d3356;
   transition: background-color 0.2s ease;
 }
+
 .heart {
-  background-color: #ffb8b3da;
+  background-color: rgba(215, 89, 81, 0.1);
   color: #d75951;
 }
 
@@ -438,7 +445,7 @@ header {
 }
 .orange {
   color: #dca11d;
-  background-color: #ffd780cf;
+  background-color: rgba(220, 161, 29, 0.1);
 }
 
 .rating-btn:hover {
@@ -458,19 +465,6 @@ header {
 .green {
   color: green;
 }
-.option-section {
-  margin-bottom: 20px;
-  padding-bottom: 24px;
-  border-bottom: 1px solid #e4e4e4;
-}
-
-.option-label {
-  display: block;
-  font-size: 14px;
-  font-weight: 600;
-  color: #0d3356;
-  margin-bottom: 12px;
-}
 
 .color-options {
   display: grid;
@@ -485,19 +479,45 @@ header {
   border: 2px solid transparent;
   cursor: pointer;
   outline: none;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   transition:
-    box-shadow 0.2s ease,
-    transform 0.2s ease;
+    transform 0.2s ease,
+    box-shadow 0.2s ease;
 }
 
 .color-circle:hover {
   transform: scale(1.05);
-}
-
-.color-circle.active {
   box-shadow:
     0 0 0 2px #fff,
-    0 0 0 4px #0d3356;
+    0 0 0 4px #768a5c;
+}
+
+.color-circle:hover::after {
+  content: "✓";
+  color: rgba(0, 0, 0, 0.45);
+  font-size: 24px;
+  font-weight: bold;
+}
+.option-section {
+  margin-bottom: 20px;
+  padding-bottom: 24px;
+  border-bottom: 1px solid #e4e4e4;
+}
+
+.option-label {
+  display: block;
+  font-size: 14px;
+  font-weight: 600;
+  color: #0d3356;
+  margin-bottom: 12px;
+}
+.size-options {
+  display: flex;
+  gap: 12px;
+  flex-wrap: wrap;
 }
 
 .size-options {
@@ -505,17 +525,16 @@ header {
   gap: 12px;
   flex-wrap: wrap;
 }
-
 .size-radio {
   display: flex;
   align-items: center;
   gap: 8px;
-  padding: 10px 20px;
+  padding: 10px 16px;
   border: 1px solid #e4e4e4;
-  border-radius: 14px;
+  border-radius: 8px;
   font-size: 14px;
   cursor: pointer;
-  color: #0d3356;
+  color: #9ea0a5;
   transition: all 0.2s ease;
   background-color: #ece9e98d;
 }
@@ -523,14 +542,17 @@ header {
 .size-radio input[type="radio"] {
   accent-color: #0d3356;
   cursor: pointer;
+  padding: 5px;
 }
-
+.size-radio:hover {
+  border-radius: #0d3356;
+  color: #0d3356;
+  background-color: #e4e4e4;
+}
 .size-radio.active {
-  border-color: #0d3356;
   background-color: #ece9e98d;
   font-weight: 600;
 }
-
 .cart-actions {
   display: flex;
   gap: 12px;
@@ -538,24 +560,37 @@ header {
 }
 
 .quantity-selector {
-  display: flex;
+  display: grid;
+  grid-template-columns: repeat(3, auto);
   align-items: center;
   justify-content: space-between;
-  background-color: #f4f4f4;
-  border-radius: 99px;
-  padding: 10px 12px;
+  justify-items: center;
+  font-size: 18px;
+  font-weight: 700;
+  color: rgb(58, 73, 128);
   width: 150px;
   height: 54px;
+  background-color: rgba(58, 73, 128, 0.1);
+  border-radius: 99px;
 }
 
 .quantity-selector button {
-  background: none;
-  border: none;
-  display: flex;
-  align-items: center;
-  justify-content: center;
+  display: grid;
+  place-items: center;
+  width: 54px;
+  height: 100%;
+  background-color: transparent;
   cursor: pointer;
-  padding: 2px;
+  border: none;
+}
+.quantity-selector button:hover {
+  background-color: rgba(58, 73, 128, 0.2);
+}
+.quantity-selector button:first-child {
+  border-radius: 99px 0 0 99px;
+}
+.quantity-selector button:last-child {
+  border-radius: 0 99px 99px 0;
 }
 
 .quantity-selector button img {
@@ -570,20 +605,17 @@ header {
 }
 
 .add-to-cart-btn {
-  flex: 0 1 200px;
-  background-color: #0d3356;
-  color: #fff;
-  border: none;
-  border-radius: 30px;
-  padding: 16px 28px;
-  font-size: 14px;
-  font-weight: 600;
   display: flex;
   align-items: center;
-  justify-content: center;
-  gap: 8px;
+  gap: 10px;
+  font-size: 18px;
+  font-weight: 500;
+  color: #fff;
+  background-color: #3a4980;
+  padding: 16px 28px;
+  border: none;
+  border-radius: 99px;
   cursor: pointer;
-  transition: background-color 0.2s ease;
 }
 
 .add-to-cart-btn:hover {
@@ -866,7 +898,7 @@ header {
   position: absolute;
   top: 10px;
   right: 10px;
-  background: rgba(255, 255, 255, 0.8);
+  background: rgba(255, 255, 255, 0.6);
   border: none;
   width: 28px;
   height: 28px;
