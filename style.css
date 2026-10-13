@@ -756,7 +756,7 @@ header {
 
 .like-btn,
 .reply-btn {
-  background: #d4cccc;
+  background: rgba(212, 204, 204, 0.4);
   border: none;
   border-radius: 6px;
   padding: 6px 14px;
@@ -769,7 +769,7 @@ header {
   gap: 4px;
 }
 .reply-btn {
-  background-color: #e8a19ced;
+  background-color: rgb(215, 89, 81, 0.1);
   color: #d75951;
 }
 
@@ -943,4 +943,54 @@ header {
 .rating-count {
   color: #9ea0a5;
   font-size: 11px;
+}
+
+.carousel-container {
+  position: relative;
+  width: 100%;
+  max-width: 100%;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  padding: 0 15px;
+}
+
+.carousel-btn {
+  position: absolute;
+  top: 33%;
+  transform: translateY(-50%);
+  background-color: #ffffff;
+  border: 1px solid #e0e0e0;
+  width: 36px;
+  height: 36px;
+  border-radius: 99px;
+  cursor: pointer;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  z-index: 10;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  padding: 0;
+  transition: all 0.2s ease-in-out;
+}
+
+.carousel-btn:hover {
+  background-color: #f8f8f8;
+  box-shadow: 0 6px 14px rgba(0, 0, 0, 0.15);
+}
+
+.btn-icon {
+  width: 16px;
+  height: auto;
+  display: block;
+}
+
+.prev-btn {
+  left: -1px;
+}
+
+.next-btn {
+  right: -1px;
 }
